@@ -6,44 +6,79 @@ body {
 #main {
     display: block;
     margin: auto;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     width: 50%;
     text-align: center;
-
-
 }
 
-/* h1 {
+h1 {
+    font-family: 'Russo One', sans-serif;
     text-align: center;
-
+    margin: 20px 0px 20px 0px;
 }
 
-img {
+div .hero-image img{
     width: 500px;
     height: auto;
     display: block;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
 }
 
-button {
+.search {
+    margin: 40px 20px 0 0;
+}
+
+.search #info {
     position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    margin: 20px;
-    padding: 10px;
-    font-size: 18 px;
-    border-radius: 10px;
-
-}
-
-input {
+    margin-right: 20px;
     padding: 10px;
     font-size: 12px;
     border-radius: 10px;
     width: 300px;
+    outline: none;
+}
+
+.search #info input:hover {
+    cursor: text;
+}
+
+.search #begin-search {
+    width: 100px;
+    position: relative;
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 18 px;
+    color: black;
+    border-radius: 10px;
+    transition: background-color .3s, color .3s; 
+}
+
+.search #begin-search:hover {
+    background-color:black;
+    color: white;
+    cursor: pointer;
+}
+
+/* would like to add audio of lightsaber turning on when you click the above button */
+
+
+
+
+/* .results-container {
+    width: 60%;
+    background-color: yellow;
+    border: 3 px solid blue;
+    margin: auto;
+}
+
+.results-container .square {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    overflow: scroll;
 } */
 

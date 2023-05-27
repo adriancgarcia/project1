@@ -8,6 +8,9 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="./app.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
 
 
@@ -16,14 +19,19 @@
 
     <div id="main">
         <div class="page-title">
-            <h1>Begin your search into the Star Wars Universe</h1>
+            <h1>Explore the Star Wars Universe</h1>
         </div>
         <div class="hero-image">
-            <img src="./G7IdjxD-free-star-wars-wallpapers.jpg" alt="star wars background">
+            <img src="./G7IdjxD-free-star-wars-wallpapers.jpg" alt="star wars cover">
         </div>
-        <div class="controls">
-            <button>May the force be with you</button>
-            <input placeholder="search by movie title, character name, planet, etc.">
+        <form class="search">
+            <input type="text" id="info" name="starwars" placeholder="search by movie title, character name, planet, etc.">
+
+            <input type ="submit" id="begin-search" value="Search">
+        </form>
+        <div class="results-container">
+
+
         </div>
      </div>
     
