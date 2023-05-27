@@ -1,0 +1,49 @@
+body {
+    /* background-image: url:("./images/G7IdjxD-free-star-wars-wallpapers.jpg") */
+    /* background-color: yellow; */
+}
+
+#main {
+    display: block;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+
+
+}
+
+/* h1 {
+    text-align: center;
+
+}
+
+img {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+button {
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: 20px;
+    padding: 10px;
+    font-size: 18 px;
+    border-radius: 10px;
+
+}
+
+input {
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    width: 300px;
+} */
+

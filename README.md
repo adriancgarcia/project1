@@ -48,9 +48,9 @@ We've formatted this data in JSON and exposed it to you in a RESTish implementat
 | Day   | Task                       |
 | ----- | -------------------------- |
 | 1     | Set up & test api          |
-| 2     | HTML & css deploy          | 
+| 2     | HTML, css, deploy          | 
 | 3     | add javascript function    |
-| 4     | changes and more styling   |
-| 5     | last minute bugs and fixes |
+| 4     | add javascript function   |
+| 5     | bugs, fixes, more styling |
 
 
