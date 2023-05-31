@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="./app.js" defer></script>
+    <script src="./app3.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,15 +24,71 @@
         <div class="hero-image">
             <img src="./G7IdjxD-free-star-wars-wallpapers.jpg" alt="star wars cover">
         </div>
-        <form class="search">
-            <input type="text" id="info" name="starwars" placeholder="search by movie title, character name, planet, etc.">
+        <!-- <form class="search"> -->
+            <!-- <input type="text" id="info" name="starwars" placeholder="search by movie title, character name, planet, etc."> -->
+            <!-- <div id="films">
+                <input type ="submit" id="searchFilms" name="movies" value="Films">
+            </div>
 
-            <input type ="submit" id="begin-search" value="Search">
-        </form>
-        <div class="results-container">
+            <div>
+                <input type ="submit" id="searchPeople" name="starwars" value="People">
+            </div>
+            
 
+            <div>
+                <input type ="submit" id="searchSpecies" name="starwars" value="Species">
+            </div>
+            <div>
+                <input type ="submit" id="searchPlanets" value="Planets">
+            </div>
+           
+            <div>
+                <input type ="submit" id="searchStarships" value="Starships">
+            </div>
+            
+            <div>
+                <input type ="submit" id="searchVehicles" value="Vehicles">
+            </div>
 
+        </form> -->
+        
+    <form class="search">
+        <div id="buttons">
+            <!-- <div class="btn-group"> -->
+                <label class="selection">
+                    <button type="button" name="options" id="films" autocomplete="off">Films
+                </label>
+                <label class="selection">
+                    <button type="button" name="options" id="people" autocomplete="off">People
+                </label>
+                <label class="selection">
+                    <button type="button" name="options" id="starships" autocomplete="off">Starships
+                </label>
+                <label class="selection">
+                    <button type="button" name="options" id="vehicles" autocomplete="off">Vehicles
+                </label>
+            <!-- </div> -->
         </div>
+    </form>
+
+
+        <!-- <div id="nav">
+            <div class="selections">
+                <a id="films"  href="films">Films</a>
+                <a id="people" href="people">People</a>
+                <a id="starhips" href="starships">Starships</a>
+
+            </div>
+
+        </div> -->
+
+
+        <div id="results"></div>
+
+
+
+        <!-- <div id="imageArea"></div> -->
+            
      </div>
     
 

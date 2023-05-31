@@ -7,7 +7,45 @@ $searchForm.on("submit", event => {
 
     const starwars = formData.get("movies")//.toLowerCase();
     
-    const url =`https://swapi.dev/api/films/`
+
+const app = {
+
+    urls: {
+        url: 'https://swapi.dev/api/films/',
+        urlFilms: 'https://swapi.dev/api/films/',
+        urlpeople: 'https://swapi.dev/api/people/',
+        urlPlanets: 'https://swapi.dev/api/planets/',
+        urlSpecies: 'https://swapi.dev/api/species/',
+        urlVehicles: 'https://swapi.dev/api/vehicles/',
+        urlStarships: 'https://swapi.dev/api/starships/',
+    },
+     init: () => {
+        app.addListeners();
+        app.buildNav();
+     },
+     addListeners: () => {
+        let nav = document.getElementByID('nav');
+        nav.addEventListener('click', app.getData);
+
+     }
+
+     buildNav: () => {
+        let df = new DocumentFragment();
+        for (let nm in app.urls) {
+            if (nm != 'url') {
+                let link = document.createElement('a');
+                link.href = '${app.urls.url}${app.urls[nm]}';
+                link.textContent = nm;
+                link.setAttribute('data-link', `$app.urls.url}${app.urls}`)
+                df.append(link);
+            }
+        } 
+        document.getElementById('nav').append(df);
+     },
+     getData:
+
+
+
 
     console.log(url)
 
@@ -32,7 +70,7 @@ const $result = $(".results")
         console.log(data);
 
         films.innerHTML = data.results.map((item) => {
-            let nextFilm = item.name || item.title;
+            let nm = item.name || item.title;
             return `<div>
                     <b> name: </b> ${nextFilm}
                     </div>;`;

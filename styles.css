@@ -28,11 +28,11 @@ div .hero-image img{
     width: 100%;
 }
 
-.search {
+#buttons {
     margin: 40px 20px 0 0;
 }
 
-.search #info {
+.selection {
     position: relative;
     margin-right: 20px;
     padding: 10px;
@@ -42,11 +42,11 @@ div .hero-image img{
     outline: none;
 }
 
-.search #info input:hover {
+button:hover {
     cursor: text;
 }
 
-.search #begin-search {
+button {
     width: 100px;
     position: relative;
     margin-left: 20px;
@@ -57,7 +57,7 @@ div .hero-image img{
     transition: background-color .3s, color .3s; 
 }
 
-.search #begin-search:hover {
+button:hover {
     background-color:black;
     color: white;
     cursor: pointer;
@@ -66,19 +66,19 @@ div .hero-image img{
 /* would like to add audio of lightsaber turning on when you click the above button */
 
 
-
-
-/* .results-container {
+.results {
     width: 60%;
-    background-color: yellow;
+    background-color: black;
     border: 3 px solid blue;
     margin: auto;
+    color: white;
+
 }
 
-.results-container .square {
+.results .imageArea {
     background-color: white;
     width: 200px;
     height: 200px;
     overflow: scroll;
-} */
+}
 
