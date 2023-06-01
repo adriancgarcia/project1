@@ -1,5 +1,5 @@
 body {
-    /* background-image: url:("./images/G7IdjxD-free-star-wars-wallpapers.jpg") */
+    /* background-image: url ("./thor-alvis-6AQSaVpPCWE-unsplash.jpg") */
     /* background-color: yellow; */
 }
 
@@ -20,8 +20,12 @@ h1 {
 
 div .hero-image img{
     width: 500px;
-    height: auto;
+    height: 100%;
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
     display: block;
+    /* position: fixed; */
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -42,9 +46,6 @@ div .hero-image img{
     outline: none;
 }
 
-button:hover {
-    cursor: text;
-}
 
 button {
     width: 100px;
@@ -63,22 +64,48 @@ button:hover {
     cursor: pointer;
 }
 
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* would like to add audio of lightsaber turning on when you click the above button */
 
-
-.results {
+/* .results {
     width: 60%;
     background-color: black;
     border: 3 px solid blue;
     margin: auto;
     color: white;
 
-}
+} */
 
-.results .imageArea {
+/* .results .imageArea {
     background-color: white;
     width: 200px;
     height: 200px;
     overflow: scroll;
+} */
+
+.data-container {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: 3px solid yellow;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
+
+.data-container .square {
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    overflow: scroll;
+    margin: 10px;
+    border:2px solid white;
+} 
+ 
 
