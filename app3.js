@@ -4,39 +4,44 @@
 // https://www.youtube.com/watch?v=gX5YqsmAjAs
 // https://selftaughttxg.com/2022/04-22/StarWarsAPI-01/
 
-// const results = document.querySelector('#results');
+// const results = document.querySelector('.card');
 
-// const addSquare = (results) => {
-//     const square = document.createElement("div")
-//     square.classList.add("square")
+// const addCard = (results) => {
+//     const card = document.createElement("div")
+//     card.classList.add("card")
 //     square.innerHTML = `<h5>${results}</h5>`
 //     const container = document.querySelector(".data-container")
-//     container.append(square)
+//     container.append(card)
 // }
 
-getData().catch(error => {
-    console.log("Error message..");
-    // console.error(error)
-});
+// getData().catch(error => {
+//     // console.log("Error message..");
+//     // console.error(error)
+// });
+
+// $results.html(`<div>Loading...</div>`);
 
 async function getData(value) {
     const res = await fetch(`https://swapi.dev/api/${value}`);
     const data = await res.json();
-    console.log(data)
+    // console.log(data)
     displayResults(data, value);
 }
 
-// const film
+// event listener buttons
+document.querySelector('#buttons').addEventListener('click', event => {
+    getData(event.target.textContent.trim().toLowerCase());
+    // event.preventDefault();
+});
 
 function displayResults(data, value) {
     let output = "";
     // console.log(data);
     if(value === 'films') { 
         data.results.forEach(item => {
-            // addSquare()
             output += `
                 <div class="card card-film">
-                    <h4>${item.title}</h4>
+                    <h2>${item.title}</h2>
                     <div class="content">
                         <span>Episode</span>: ${item.episode_id}<br>
                         <span>Director</span>: ${item.director}<br>
@@ -49,10 +54,9 @@ function displayResults(data, value) {
     }
     if(value === 'people') {
         data.results.forEach(item => {
-            // addSquare()
             output += `
                 <div class="card card-people">
-                    <h4>${item.name}</h4>
+                    <h2>${item.name}</h2>
                     <div class="content">
                         <span>Birth Year</span>: ${item.birth_year}<br>
                         <span>Gender</span>: ${item.gender}<br>
@@ -65,10 +69,9 @@ function displayResults(data, value) {
     }
     if(value === 'starships') {
         data.results.forEach(item => {
-            // addSquare()
             output += `
                 <div class="card card-starships">
-                    <h4>${item.name}</h4>
+                    <h2>${item.name}</h2>
                     <div class="content">
                         <span>Manufacturer</span>: ${item.manufacturer}<br>
                         <span>Model</span>: ${item.Model}<br>
@@ -84,10 +87,9 @@ function displayResults(data, value) {
     }
     if(value === 'vehicles') {
         data.results.forEach(item => {
-            // addSquare()
             output += `
                 <div class="card card-vehicles">
-                    <h4>${item.name}</h4>
+                    <h2>${item.name}</h2>
                     <div class="content">
                         <span>Manufacturer</span>: ${item.manufacturer}<br>
                         <span>Model</span>: ${item.Model}<br>
@@ -102,10 +104,9 @@ function displayResults(data, value) {
     }
     if(value === 'species') {
         data.results.forEach(item => {
-            // addSquare()
             output += `
                 <div class="card card-species">
-                    <h4>${item.name}</h4>
+                    <h2>${item.name}</h2>
                     <div class="content">
                         <span>Classification</span>: ${item.classification}<br>
                         <span>Language</span>: ${item.language}<br>
@@ -115,24 +116,22 @@ function displayResults(data, value) {
                     </div>
                 </div>
                 `
-            })
-        }
+            });
+        };
 
     //     .catch (() => {
-    //     $result.html(`<div> there was an error...</div>`)
+    //         $card.html(`<div> there was an error...</div>`)
+    //         console.log("Error message..");
     // });
-    
     results.innerHTML = output;
-    // addSquare()
 };
 
 
-
-// event listener buttons
-document.querySelector('#buttons').addEventListener('click', event => {
-    event.preventDefault();
-    getData(event.target.textContent.trim().toLowerCase());
-});
+// // event listener buttons
+// document.querySelector('#buttons').addEventListener('click', event => {
+//     event.preventDefault();
+//     getData(event.target.textContent.trim().toLowerCase());
+// });
 
 
 

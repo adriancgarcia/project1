@@ -41,11 +41,15 @@ h1 {
     /* width: 100%; */
 }
 
+.search {
+    padding: 20px;
+}
+
 #buttons {
     margin: 40px 20px 0 0;
 }
 
-.selection {
+/* .selection {
     position: relative;
     margin-right: 20px;
     padding: 10px;
@@ -53,7 +57,7 @@ h1 {
     border-radius: 10px;
     width: 300px;
     outline: none;
-}
+} */
 
 
 button {
@@ -62,7 +66,9 @@ button {
     margin-left: 20px;
     padding: 10px;
     font-size: 18 px;
+    font-family: 'Bruno Ace SC', cursive;
     color: black;
+    text-align: center;
     border-radius: 10px;
     transition: background-color .3s, color .3s; 
 }
@@ -81,53 +87,54 @@ button:hover {
 
 /* would like to add audio of lightsaber turning on when you click the above button */
 
-/* .results {
-    width: 60%;
-    background-color: black;
-    border: 3 px solid blue;
-    margin: auto;
-    color: white;
 
-} */
-
-/* .results .imageArea {
-    background-color: white;
-    width: 200px;
-    height: 200px;
-    overflow: scroll;
-} */
-
-/* .data-container {
+.data-container {
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
     color: white;
-    border: 3px solid yellow;
+    border: 5px solid yellow;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-} */
-
-.data-container .card {
-    background-color: white;
-    width: 150px;
-    height: 150px;
-    overflow: scroll;
-    margin: 10px;
-    border:2px solid green;
-    color: black;
-} 
+    border-radius: 20px;
+}
 
 .card {
-    border-radius:15px;
     border: 3px solid red;
-    background-color: blue;
+    border-radius: 20px;
+    /* background-color: white; */
+    /* opacity: 100%; */
+    width: 250px;
+    height: 150px;
+    /* overflow: scroll; */
+    overflow: auto;
+    margin: 15px;
+    padding: 15px;
+    color: whitesmoke;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size:16px;
+    font-family: 'Bruno Ace SC', cursive;
+    /* background-image: url("photoholgic-g6KtY2ad3vc-unsplash.jpg"); */
+
+} 
+
+/* .card {
+    border-radius:10px;
+    border: 3px solid red;
     width: 250px;
     min-width: 250px;
-    text-wrap: wrap;
+    flex-wrap: wrap;
     text-align: center;
     margin: 15px;
     padding: 15px;
-}
+} */
+
+/* .card-content {
+    width: 225px;
+    overflow: auto;
+    border-radius: 15px;
+} */
  
 
