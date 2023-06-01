@@ -6,16 +6,20 @@
 
 // const results = document.querySelector('#results');
 
-const addSquare = (results) => {
-    const square = document.createElement("div")
-    square.classList.add("square")
-    square.innerHTML = `<h5>${results}</h5>`
-    const container = document.querySelector(".data-container")
-    container.append(square)
-}
+// const addSquare = (results) => {
+//     const square = document.createElement("div")
+//     square.classList.add("square")
+//     square.innerHTML = `<h5>${results}</h5>`
+//     const container = document.querySelector(".data-container")
+//     container.append(square)
+// }
 
+getData().catch(error => {
+    console.log("Error message..");
+    // console.error(error)
+});
 
-async function asyncFetch(value) {
+async function getData(value) {
     const res = await fetch(`https://swapi.dev/api/${value}`);
     const data = await res.json();
     console.log(data)
@@ -27,13 +31,11 @@ async function asyncFetch(value) {
 function displayResults(data, value) {
     let output = "";
     // console.log(data);
-    if(value === 'films') {
+    if(value === 'films') { 
         data.results.forEach(item => {
-            
-            addSquare()
+            // addSquare()
             output += `
-                <div>
-                
+                <div class="card card-film">
                     <h4>${item.title}</h4>
                     <div class="content">
                         <span>Episode</span>: ${item.episode_id}<br>
@@ -47,14 +49,15 @@ function displayResults(data, value) {
     }
     if(value === 'people') {
         data.results.forEach(item => {
+            // addSquare()
             output += `
-                <div>
+                <div class="card card-people">
                     <h4>${item.name}</h4>
                     <div class="content">
                         <span>Birth Year</span>: ${item.birth_year}<br>
-                        // <span>Home World</span>: ${item.home_world}<br>
-                        // <span>Films</span>: ${item.films.join(' , ')}<br>
+                        <span>Gender</span>: ${item.gender}<br>
                         <span>Skin Color</span>: ${item.skin_color}<br>
+                        <span>Eye Color</span>: ${item.eye_color}<br>
                     </div>
                 </div>
             `
@@ -62,8 +65,9 @@ function displayResults(data, value) {
     }
     if(value === 'starships') {
         data.results.forEach(item => {
+            // addSquare()
             output += `
-                <div>
+                <div class="card card-starships">
                     <h4>${item.name}</h4>
                     <div class="content">
                         <span>Manufacturer</span>: ${item.manufacturer}<br>
@@ -80,8 +84,9 @@ function displayResults(data, value) {
     }
     if(value === 'vehicles') {
         data.results.forEach(item => {
+            // addSquare()
             output += `
-                <div>
+                <div class="card card-vehicles">
                     <h4>${item.name}</h4>
                     <div class="content">
                         <span>Manufacturer</span>: ${item.manufacturer}<br>
@@ -95,15 +100,14 @@ function displayResults(data, value) {
             `
         })
     }
-
     if(value === 'species') {
         data.results.forEach(item => {
+            // addSquare()
             output += `
-                <div>
+                <div class="card card-species">
                     <h4>${item.name}</h4>
                     <div class="content">
                         <span>Classification</span>: ${item.classification}<br>
-                        <span>Home World</span>: ${item.homeworld}<br>
                         <span>Language</span>: ${item.language}<br>
                         <span>Average Height</span>: ${item.average_height}<br>
                         <span>Average Lifespan</span>: ${item.average_lifespan}<br>
@@ -117,8 +121,9 @@ function displayResults(data, value) {
     //     .catch (() => {
     //     $result.html(`<div> there was an error...</div>`)
     // });
-
+    
     results.innerHTML = output;
+    // addSquare()
 };
 
 
@@ -126,26 +131,26 @@ function displayResults(data, value) {
 // event listener buttons
 document.querySelector('#buttons').addEventListener('click', event => {
     event.preventDefault();
-    asyncFetch(event.target.textContent.trim().toLowerCase());
+    getData(event.target.textContent.trim().toLowerCase());
 });
 
 
 
-let footer = document.getElementById('footer');
-footer.innerHTML = '';
+// let footer = document.getElementById('footer');
+// footer.innerHTML = '';
 
-if(data.previous) {
+// if(data.previous) {
 
-    let prev = document.createElement('a');
-    prev.href = data.previous;
-    let url = new URL(data.previous);
-    let labels = url.pathname.split('/');
-    let label = labels[labels.length - 2];
-    prev.textContent = `<< Previous} ${label}`;
-    prev.setAttribute('next', data.previous);
-    footer.append(prev) 
-}
-if (data.next) {
+//     let prev = document.createElement('a');
+//     prev.href = data.previous;
+//     let url = new URL(data.previous);
+//     let labels = url.pathname.split('/');
+//     let label = labels[labels.length - 2];
+//     prev.textContent = `<< Previous} ${label}`;
+//     prev.setAttribute('next', data.previous);
+//     footer.append(prev) 
+// }
+// if (data.next) {
 
-}
+// }
 
