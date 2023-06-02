@@ -50,7 +50,6 @@ body {
 }
 
 #header {
-    background-color: white;
     width: 100%;
 }
 
@@ -74,8 +73,20 @@ h1 {
     
 }
 
+input {
+    width: auto;
+    position: relative;
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 18 px;
+    font-family: 'Bruno Ace SC', cursive;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+}
+
 #buttons {
-    margin: 20px 20px 40px 0;
+    margin: 20px 20px 20px 0;
 }
 
 button {
@@ -93,7 +104,7 @@ button {
 
 button:hover {
     background-color:black;
-    color: white;
+    color: whitesmoke;
     cursor: pointer;
 }
 
@@ -107,8 +118,8 @@ button:hover {
 
 .data-container {
     width: 100%;
-    color: white;
-    border: 5px solid yellow;
+    /* color: white; */
+    border: 5px solid #FFE81F;
     margin: auto;
     padding: 20px; 
     display: flex;
@@ -124,7 +135,7 @@ button:hover {
 .card {
     border-radius: 20px;
     width: 250px;
-    height:200px;
+    height:auto;
     /* overflow: hidden; */
     margin: 15px;
     padding: 15px;
@@ -133,14 +144,16 @@ button:hover {
     text-align: center;
     font-size:16px;
     font-family: 'Bruno Ace SC', cursive;
-    scrollbar-width:thin;
-    scroll-margin: 5px;
+    /* scrollbar-width:thin;
+    scroll-margin: 5px; */
 } 
 
 .card-content {
-    overflow: hidden;
+    /* overflow: hidden; */
     border: 3px solid red;
     border-radius: 15px;
+    background: rgb(6, 6, 6);
+    opacity: 80%;
     padding: 0;
     margin: .5rem;
     /* height: 200px; */

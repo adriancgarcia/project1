@@ -29,7 +29,7 @@ function displayResults(data, value) {
                 <div class="card card-film">
                     <h2>${item.title}</h2>
                     <div class="content">
-                        <span>Episode</span>: ${item.episode_id}<br>
+                        <span> Episode</span>: ${item.episode_id}<br>
                         <span>Director</span>: ${item.director}<br>
                         <span>Release Date</span>: ${item.release_date}<br>
                         <p class=""> ${item.opening_crawl}</p>
