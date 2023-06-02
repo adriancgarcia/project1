@@ -2,7 +2,45 @@ body {
     background-image: url("thor-alvis-6AQSaVpPCWE-unsplash.jpg");
     /* background-color: yellow; */
 }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;  
+    background-color: grey 80%;
+    display: none;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+}
 
+.overlay.active {
+    display: flex;
+    cursor: wait;
+}
+
+.loading {
+    font-size: 16px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+    opacity: .1;
+}
+100% {
+    opacity: 1;
+}
+}
 #main {
     display: block;
     margin: auto;
@@ -42,7 +80,8 @@ h1 {
 }
 
 .search {
-    padding: 20px;
+    padding: 10px;
+    
 }
 
 #buttons {
@@ -98,17 +137,22 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 20px;
-}
+} 
+
+.card::-webkit-scrollbar-track {
+    border-radius: 20px;
+  } 
+
 
 .card {
-    border: 3px solid red;
+    /* outline: 3px solid red; */
     border-radius: 20px;
     /* background-color: white; */
     /* opacity: 100%; */
     width: 250px;
     height: 150px;
     /* overflow: scroll; */
-    overflow: auto;
+    overflow: hidden;
     margin: 15px;
     padding: 15px;
     color: whitesmoke;
@@ -117,8 +161,60 @@ button:hover {
     font-size:16px;
     font-family: 'Bruno Ace SC', cursive;
     /* background-image: url("photoholgic-g6KtY2ad3vc-unsplash.jpg"); */
-
+    scrollbar-width:thin;
+    scroll-margin: 5px;
 } 
+
+.card-content {
+    overflow: hidden;
+    border: 3px solid red;
+    border-radius: 15px;
+    padding: 0;
+    margin: .5rem;
+}
+
+.card:hover {
+    overflow:auto;
+}
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;  
+    background-color: grey 80%;
+    display: none;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.active {
+    display: flex;
+    cursor: wait;
+}
+
+.loading {
+    font-size: 16px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+    opacity: .1;
+}
+100% {
+    opacity: 1;
+}
+} */
 
 /* .card {
     border-radius:10px;
@@ -136,5 +232,3 @@ button:hover {
     overflow: auto;
     border-radius: 15px;
 } */
- 
-

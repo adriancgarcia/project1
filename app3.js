@@ -28,18 +28,29 @@ async function getData(value) {
     displayResults(data, value);
 }
 
+
 // event listener buttons
 document.querySelector('#buttons').addEventListener('click', event => {
     getData(event.target.textContent.trim().toLowerCase());
     // event.preventDefault();
+
+
+
+// show loader
+document.querySelector('.overlay').classList.add('active');
 });
+
+
 
 function displayResults(data, value) {
     let output = "";
     // console.log(data);
+
+
     if(value === 'films') { 
         data.results.forEach(item => {
             output += `
+            <div class="card-content">
                 <div class="card card-film">
                     <h2>${item.title}</h2>
                     <div class="content">
@@ -49,12 +60,14 @@ function displayResults(data, value) {
                         <p class=""> ${item.opening_crawl}</p>
                     </div>
                 </div>
+            </div>
             `
         }) 
     }
     if(value === 'people') {
         data.results.forEach(item => {
             output += `
+            <div class="card-content">
                 <div class="card card-people">
                     <h2>${item.name}</h2>
                     <div class="content">
@@ -64,12 +77,14 @@ function displayResults(data, value) {
                         <span>Eye Color</span>: ${item.eye_color}<br>
                     </div>
                 </div>
+            </div>
             `
         })
     }
     if(value === 'starships') {
         data.results.forEach(item => {
             output += `
+            <div class="card-content">
                 <div class="card card-starships">
                     <h2>${item.name}</h2>
                     <div class="content">
@@ -79,15 +94,16 @@ function displayResults(data, value) {
                         <span>Hyperdrive Rating</span>: ${item.hyperdrive_rating}<br>
                         <span>Cost</span>: ${item.cost_in_credits}<br>
                         <span>Passengers</span>: ${item.passengers}<br>
-
                     </div>
                 </div>
+            </div>
             `
         })
     }
     if(value === 'vehicles') {
         data.results.forEach(item => {
             output += `
+            <div class="card-content">
                 <div class="card card-vehicles">
                     <h2>${item.name}</h2>
                     <div class="content">
@@ -99,12 +115,14 @@ function displayResults(data, value) {
                         <span>Passengers</span>: ${item.passengers}<br>
                     </div>
                 </div>
+            </div>    
             `
         })
     }
     if(value === 'species') {
         data.results.forEach(item => {
             output += `
+            <div class="card-content">
                 <div class="card card-species">
                     <h2>${item.name}</h2>
                     <div class="content">
@@ -115,16 +133,23 @@ function displayResults(data, value) {
                         <span>Designation</span>: ${item.designation}<br>
                     </div>
                 </div>
+            </div>  
                 `
             });
+
+            
         };
+    document.querySelector('.overlay').classList.remove('active');
+    
+    results.innerHTML = output;
+}
 
     //     .catch (() => {
     //         $card.html(`<div> there was an error...</div>`)
     //         console.log("Error message..");
     // });
-    results.innerHTML = output;
-};
+   
+
 
 
 // // event listener buttons

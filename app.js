@@ -19,7 +19,10 @@ const $result = $(".results")
 
 // $('[name="starwars"]')[0].value = "";
 
-// $imageArea.empty();
+// show loader
+document.querySelector('.overlay').classList.add('active');
+
+// $imageArea.e mpty();
 // $result.html(`<div>Loading...</div>`);
 
     fetch (url)
