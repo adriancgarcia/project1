@@ -1,180 +1,134 @@
-// I used snippets of code and ideas on organizing the data from different websites to help build my app
-// https://www.youtube.com/watch?v=Y6fhfs6nBww
-// https://www.youtube.com/watch?v=qb6sMTeyLJY
-// https://www.youtube.com/watch?v=gX5YqsmAjAs
-// https://selftaughttxg.com/2022/04-22/StarWarsAPI-01/
+const $searchForm = $("form");
 
-// const results = document.querySelector('.card');
+$searchForm.on("submit", event => {
+    event.preventDefault(); 
 
-// const addCard = (results) => {
-//     const card = document.createElement("div")
-//     card.classList.add("card")
-//     square.innerHTML = `<h5>${results}</h5>`
-//     const container = document.querySelector(".data-container")
-//     container.append(card)
-// }
+    const formData = new FormData(event.target);
 
-// getData().catch(error => {
-//     // console.log("Error message..");
-//     // console.error(error)
-// });
+    const starwars = formData.get("movies")//.toLowerCase();
+    
+    const url =`https://swapi.dev/api/films/`
 
-// $results.html(`<div>Loading...</div>`);
+    console.log(url)
 
-async function getData(value) {
-    const res = await fetch(`https://swapi.dev/api/${value}`);
-    const data = await res.json();
-    // console.log(data)
-    displayResults(data, value);
-}
+    // $.ajax(url)
+    // .then(response => console.log(response))
 
+const $imageArea = $(".imageArea") 
+const $result = $(".results")
 
-// event listener buttons
-document.querySelector('#buttons').addEventListener('click', event => {
-    getData(event.target.textContent.trim().toLowerCase());
-    // event.preventDefault();
-
-
+// $('[name="starwars"]')[0].value = "";
 
 // show loader
 document.querySelector('.overlay').classList.add('active');
+
+// $imageArea.e mpty();
+// $result.html(`<div>Loading...</div>`);
+
+    fetch (url)
+    .then(response => {
+        return response.json();
+    })
+    .then((data) => {
+        let films = document.getElementById('results');
+        // let films = data.results;
+        console.log(data);
+
+        films.innerHTML = data.results.map((item) => {
+            let nextFilm = item.name || item.title;
+            return `<div>
+                    <b> name: </b> ${nextFilm}
+                    </div>;`;
+        })
+        .join (' ');
+
+        // getFilms(films);
+
+        // stats.innerHTML = JSON.stringify(data.name);
+        
+        // $imageArea.html(
+            // `<img src=${data.name} alt=${data.name}>`   
+})
+
+        .catch (() => {
+        $result.html(`<div> there was an error...</div>`)  
+        // console.log("request error") 
+
+    });
+
+    // const getFilms = (films) => {
+    //     console.log(films);
+    //     let output = ``;
+    //     films.forEach((element, index) => {
+    //         let titleFilm = element.title;
+    //         let episodeFilm = element.episode_id;
+    //         let characters = element.characters;
+    //     })
+    // }
+
+
 });
 
 
-
-function displayResults(data, value) {
-    let output = "";
-    // console.log(data);
-
-
-    if(value === 'films') { 
-        data.results.forEach(item => {
-            output += `
-            <div class="card-content">
-                <div class="card card-film">
-                    <h2>${item.title}</h2>
-                    <div class="content">
-                        <span>Episode</span>: ${item.episode_id}<br>
-                        <span>Director</span>: ${item.director}<br>
-                        <span>Release Date</span>: ${item.release_date}<br>
-                        <p class=""> ${item.opening_crawl}</p>
-                    </div>
-                </div>
-            </div>
-            `
-        }) 
-    }
-    if(value === 'people') {
-        data.results.forEach(item => {
-            output += `
-            <div class="card-content">
-                <div class="card card-people">
-                    <h2>${item.name}</h2>
-                    <div class="content">
-                        <span>Birth Year</span>: ${item.birth_year}<br>
-                        <span>Gender</span>: ${item.gender}<br>
-                        <span>Skin Color</span>: ${item.skin_color}<br>
-                        <span>Eye Color</span>: ${item.eye_color}<br>
-                    </div>
-                </div>
-            </div>
-            `
-        })
-    }
-    if(value === 'starships') {
-        data.results.forEach(item => {
-            output += `
-            <div class="card-content">
-                <div class="card card-starships">
-                    <h2>${item.name}</h2>
-                    <div class="content">
-                        <span>Manufacturer</span>: ${item.manufacturer}<br>
-                        <span>Model</span>: ${item.Model}<br>
-                        <span>Starship Class</span>: ${item.starship_class}<br>
-                        <span>Hyperdrive Rating</span>: ${item.hyperdrive_rating}<br>
-                        <span>Cost</span>: ${item.cost_in_credits}<br>
-                        <span>Passengers</span>: ${item.passengers}<br>
-                    </div>
-                </div>
-            </div>
-            `
-        })
-    }
-    if(value === 'vehicles') {
-        data.results.forEach(item => {
-            output += `
-            <div class="card-content">
-                <div class="card card-vehicles">
-                    <h2>${item.name}</h2>
-                    <div class="content">
-                        <span>Manufacturer</span>: ${item.manufacturer}<br>
-                        <span>Model</span>: ${item.Model}<br>
-                        <span>Cargo Capacity</span>: ${item.cargo_capacity}<br>
-                        <span>Max Atmospheric Speed</span>: ${item.max_atmospheric_speed}<br>
-                        <span>Cost</span>: ${item.cost_in_credits}<br>
-                        <span>Passengers</span>: ${item.passengers}<br>
-                    </div>
-                </div>
-            </div>    
-            `
-        })
-    }
-    if(value === 'species') {
-        data.results.forEach(item => {
-            output += `
-            <div class="card-content">
-                <div class="card card-species">
-                    <h2>${item.name}</h2>
-                    <div class="content">
-                        <span>Classification</span>: ${item.classification}<br>
-                        <span>Language</span>: ${item.language}<br>
-                        <span>Average Height</span>: ${item.average_height}<br>
-                        <span>Average Lifespan</span>: ${item.average_lifespan}<br>
-                        <span>Designation</span>: ${item.designation}<br>
-                    </div>
-                </div>
-            </div>  
-                `
-            });
-
-            
-        };
-    document.querySelector('.overlay').classList.remove('active');
     
-    results.innerHTML = output;
-}
+    // $result.html(`
 
-    //     .catch (() => {
-    //         $card.html(`<div> there was an error...</div>`)
-    //         console.log("Error message..");
+    // <div>
+    // <b>name: </b> ${data.name('')}
+    // </div>
+
+    // <div>
+    // <b>birthyear: </b> ${data.birthyear()}
+    // </div>
+
+    // <div>
+    // <b>species: </b> ${data.species[0]}
+    // </div>
+
+    // <div>
+    // <b>species: </b> ${data.homeworld()}
+    // </div>
+
+    // <div>
+    // <b>films: </b> ${data.films()}
+    // </div>
+
+    // <div>
+    // <b>vehicles: </b> ${data.results[index].vehicles[0]}
+    // </div>
+
+    // <div>
+    // <b>starships: </b> ${data.results[index].starships[0]}
+    // </div>
+    
+    // `)
+
+    // console.log($.result)
+
+
+    // .catch (() => {
+    //     $result.html(`<div> there was an error...</div>`)
     // });
-   
 
 
 
-// // event listener buttons
-// document.querySelector('#buttons').addEventListener('click', event => {
-//     event.preventDefault();
-//     getData(event.target.textContent.trim().toLowerCase());
-// });
 
 
+// $('[name="starwars"]')[0].value = "";
 
-// let footer = document.getElementById('footer');
-// footer.innerHTML = '';
+// $imageArea.empty();
+// $result.html(`<div>Loading...</div>`);
 
-// if(data.previous) {
-
-//     let prev = document.createElement('a');
-//     prev.href = data.previous;
-//     let url = new URL(data.previous);
-//     let labels = url.pathname.split('/');
-//     let label = labels[labels.length - 2];
-//     prev.textContent = `<< Previous} ${label}`;
-//     prev.setAttribute('next', data.previous);
-//     footer.append(prev) 
-// }
-// if (data.next) {
-
-// }
-
+//     fetch (url)
+//         .then (response => {
+//             return response.json();
+//         })
+//         .then(data => {
+//             $imageArea.html(
+//                 `<img src= ${data.results.starships} alt=${data.name}>`
+//             );
+//             $result.html(`
+//             <div>
+//             <b>name: </b> ${data.name}`
+//             )
+//         });

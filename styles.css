@@ -1,7 +1,7 @@
 body {
     background-image: url("thor-alvis-6AQSaVpPCWE-unsplash.jpg");
-    /* background-color: yellow; */
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -32,20 +32,19 @@ body {
 
 @keyframes pulse {
     0% {
-        opacity: 1;
+    opacity: 1;
     }
     50% {
     opacity: .1;
-}
-100% {
+    }
+    100% {
     opacity: 1;
+    }
 }
-}
+
 #main {
     display: block;
     margin: auto;
-    /* margin-left: auto;
-    margin-right: auto; */
     width: 50%;
     text-align: center;
 }
@@ -68,15 +67,6 @@ h1 {
     width: auto;
     margin: 100px;
     height: 50%;
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: block; */
-    /* position: fixed; */
-    /* margin-top: 20px; */
-    /* margin-left: auto;
-    margin-right: auto; */
-    /* width: 100%; */
 }
 
 .search {
@@ -85,19 +75,8 @@ h1 {
 }
 
 #buttons {
-    margin: 40px 20px 0 0;
+    margin: 20px 20px 40px 0;
 }
-
-/* .selection {
-    position: relative;
-    margin-right: 20px;
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 10px;
-    width: 300px;
-    outline: none;
-} */
-
 
 button {
     width: 100px;
@@ -126,13 +105,12 @@ button:hover {
 
 /* would like to add audio of lightsaber turning on when you click the above button */
 
-
 .data-container {
     width: 100%;
-    /* background-color: black; */
     color: white;
     border: 5px solid yellow;
     margin: auto;
+    padding: 20px; 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -143,16 +121,11 @@ button:hover {
     border-radius: 20px;
   } 
 
-
 .card {
-    /* outline: 3px solid red; */
     border-radius: 20px;
-    /* background-color: white; */
-    /* opacity: 100%; */
     width: 250px;
-    height: 150px;
-    /* overflow: scroll; */
-    overflow: hidden;
+    height:200px;
+    /* overflow: hidden; */
     margin: 15px;
     padding: 15px;
     color: whitesmoke;
@@ -160,7 +133,6 @@ button:hover {
     text-align: center;
     font-size:16px;
     font-family: 'Bruno Ace SC', cursive;
-    /* background-image: url("photoholgic-g6KtY2ad3vc-unsplash.jpg"); */
     scrollbar-width:thin;
     scroll-margin: 5px;
 } 
@@ -171,64 +143,9 @@ button:hover {
     border-radius: 15px;
     padding: 0;
     margin: .5rem;
+    /* height: 200px; */
 }
 
 .card:hover {
     overflow:auto;
 }
-/* .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;  
-    background-color: grey 80%;
-    display: none;
-    flex-direction: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.overlay.active {
-    display: flex;
-    cursor: wait;
-}
-
-.loading {
-    font-size: 16px;
-    color: whitesmoke;
-    text-transform: uppercase;
-    animation-name: pulse;
-    animation-duration: 1s;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
-}
-
-@keyframes pulse {
-    0% {
-        opacity: 1;
-    }
-    50% {
-    opacity: .1;
-}
-100% {
-    opacity: 1;
-}
-} */
-
-/* .card {
-    border-radius:10px;
-    border: 3px solid red;
-    width: 250px;
-    min-width: 250px;
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 15px;
-    padding: 15px;
-} */
-
-/* .card-content {
-    width: 225px;
-    overflow: auto;
-    border-radius: 15px;
-} */
