@@ -60,6 +60,10 @@ Images for each item and more functionality that will allow the user to click on
 | 4     | add javascript function   |
 | 5     | bugs, fixes, more styling |
 
+## My Star Wars API:
+https://project1-starwars.netlify.app/
+
+
 ## I used snippets of code and ideas on organizing the data from following websites to help build my app:
 - https://www.youtube.com/watch?v=Y6fhfs6nBww
 - https://www.youtube.com/watch?v=qb6sMTeyLJY
