@@ -2,6 +2,12 @@ body {
     background-image: url("thor-alvis-6AQSaVpPCWE-unsplash.jpg");
 }
 
+/* .background-image {
+    width: auto;
+    margin: 100px;
+    height: 50%;
+} */
+
 .overlay {
     position: absolute;
     top: 0;
@@ -50,40 +56,51 @@ body {
 }
 
 #header {
-    width: 100%;
+    /* width: 100%; */
 }
 
-h1 {
+/* h1 {
     font-family: 'Black Han Sans', sans-serif;
     text-align: center;
     margin: 20px 0px 20px 0px;
     color: whitesmoke;
     font-size: 48px;
     -webkit-text-stroke: 1px black;
-}
-
-.background-image {
-    width: auto;
-    margin: 100px;
-    height: 50%;
-}
+} */
 
 .search {
     padding: 10px;
     
 }
 
+.page-title {
+    width: 100%;
+    margin: auto;
+    /* padding: 20px;  */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-title img{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* .main-search input{
+    padding:10px;
+}
 input {
     width: auto;
     position: relative;
-    margin-left: 20px;
     padding: 10px;
     font-size: 18 px;
     font-family: 'Bruno Ace SC', cursive;
     color: black;
     text-align: center;
     border-radius: 10px;
-}
+} */
 
 #buttons {
     margin: 20px 20px 20px 0;
@@ -128,14 +145,15 @@ button:hover {
     border-radius: 20px;
 } 
 
-.card::-webkit-scrollbar-track {
+/* .card::-webkit-scrollbar-track {
     border-radius: 20px;
-  } 
+  }  */
 
 .card {
-    border-radius: 20px;
+    display: flex;
+    border-radius: 15px;
     width: 250px;
-    height:auto;
+    height: auto;
     /* overflow: hidden; */
     margin: 15px;
     padding: 15px;
