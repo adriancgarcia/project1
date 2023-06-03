@@ -1,9 +1,3 @@
-// I used snippets of code and ideas on organizing the data from following websites to help build my app:
-// https://www.youtube.com/watch?v=Y6fhfs6nBww
-// https://www.youtube.com/watch?v=qb6sMTeyLJY
-// https://www.youtube.com/watch?v=gX5YqsmAjAs
-// https://selftaughttxg.com/2022/04-22/StarWarsAPI-01/
-
 async function getData(value) {
     const res = await fetch(`https://swapi.dev/api/${value}`);
     const data = await res.json();
