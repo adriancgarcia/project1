@@ -20,6 +20,13 @@ After hours of watching films and trawling through content online, we present to
 
 We've formatted this data in JSON and exposed it to you in a RESTish implementation that allows you to programmatically collect and measure the data.
 
+## How to use the api:
+click on one of the top buttons - People, Films, Starships, Vehicles, Species.
+Then the result will be displayed in a data card.
+
+## Things I would like to add:
+Images for each item and more functionality that will allow the user to click on some of the information in the data card to see more information on that item.
+
  ## Example code of you testing it?
         $.ajax("https://swapi.dev/api/")
     .then((data) => {
