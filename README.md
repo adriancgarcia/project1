@@ -6,7 +6,7 @@
 Search through all Star Wars data to find out more facts and information.
 
  ## API used 
-[link text](https://swapi.dev/)
+[Star Wars API](https://swapi.dev/)
 
 
 ## API desricption
