@@ -61,7 +61,7 @@ Images for each item and more functionality that will allow the user to click on
 | 5     | bugs, fixes, more styling |
 
 ## I used snippets of code and ideas on organizing the data from following websites to help build my app:
-https://www.youtube.com/watch?v=Y6fhfs6nBww
-https://www.youtube.com/watch?v=qb6sMTeyLJY
-https://www.youtube.com/watch?v=gX5YqsmAjAs
-https://selftaughttxg.com/2022/04-22/StarWarsAPI-01/
+- https://www.youtube.com/watch?v=Y6fhfs6nBww
+- https://www.youtube.com/watch?v=qb6sMTeyLJY
+- https://www.youtube.com/watch?v=gX5YqsmAjAs
+- https://selftaughttxg.com/2022/04-22/StarWarsAPI-01/
