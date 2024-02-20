@@ -2,12 +2,6 @@ body {
     background-image: url("thor-alvis-6AQSaVpPCWE-unsplash.jpg");
 }
 
-/* .background-image {
-    width: auto;
-    margin: 100px;
-    height: 50%;
-} */
-
 .overlay {
     position: absolute;
     top: 0;
@@ -48,62 +42,21 @@ body {
     }
 }
 
-/* #main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    width: 50%;
-    text-align: center;
-} */
-
-/* h1 {
-    font-family: 'Black Han Sans', sans-serif;
-    text-align: center;
-    margin: 20px 0px 20px 0px;
-    color: whitesmoke;
-    font-size: 48px;
-    -webkit-text-stroke: 1px black;
-} */
-
 .page-title {
     width: 100%;
-    /* margin: auto; */
     padding: 20px; 
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
 }
 
 .page-title img{
     margin-top: 20px;
     display: flex;
-    /* flex-wrap: wrap; */
     width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-
-
-/* .main-search input{
-    padding:10px;
-}
-input {
-    width: auto;
-    position: relative;
-    padding: 10px;
-    font-size: 18 px;
-    font-family: 'Bruno Ace SC', cursive;
-    color: black;
-    text-align: center;
-    border-radius: 10px;
-} */
-
-/* .search {
-    padding: 10px;  
-} */
 
 /* would like to add audio of lightsaber turning on when you click the above button */
 
@@ -113,16 +66,9 @@ input {
     justify-content: center;
     border-radius: 20px;
     width: 100%;
-    /* color: white; */
     border: 5px solid #FFE81F;
-    /* margin: auto; */
-    /* padding: 10px;  */
     margin: 20px 60px 20px 10px;
 } 
-
-/* .card::-webkit-scrollbar-track {
-    border-radius: 20px;
-  }  */
 
 .card {
     display: flex;
@@ -130,7 +76,6 @@ input {
     width: auto;
     height: 100%;
     overflow: hidden;
-    /* margin: 10px; */
     padding: 10px;
     color: whitesmoke;
     flex-wrap: wrap;
@@ -164,18 +109,13 @@ input {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* padding: 10px; */
     margin: 0 60px 0 100px;
-
-    /* margin: 20px 20px 20px 0; */
 }
 
 button {
     width: 100%;
     position: relative;
     margin-top: 20px;
-    /* margin-bottom: 20px; */
-    /* margin-left: 20px; */
     padding: 15px;
     font-size: 20px;
     font-family: 'Bruno Ace SC', cursive;
