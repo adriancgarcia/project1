@@ -101,8 +101,62 @@ input {
     border-radius: 10px;
 } */
 
-.search {
+/* .search {
     padding: 10px;  
+} */
+
+/* would like to add audio of lightsaber turning on when you click the above button */
+
+.data-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+    width: 100%;
+    /* color: white; */
+    border: 5px solid #FFE81F;
+    /* margin: auto; */
+    /* padding: 10px;  */
+    margin: 20px 60px 20px 10px;
+} 
+
+/* .card::-webkit-scrollbar-track {
+    border-radius: 20px;
+  }  */
+
+.card {
+    display: flex;
+    border-radius: 15px;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    /* margin: 10px; */
+    padding: 10px;
+    color: whitesmoke;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size:24px;
+    font-family: 'Bruno Ace SC', cursive;
+} 
+
+.card-content {
+    overflow: hidden;
+    border: 3px solid red;
+    border-radius: 15px;
+    background: rgb(6, 6, 6);
+    opacity: 80%;
+    padding: 20px;
+    margin: 40px 20px;
+    display: flex;
+    flex-wrap: flex;
+    text-align: center;
+    overflow: auto;
+    height: 100%;
+    line-height:2.5em;
+}
+
+.card:hover {
+    overflow:auto;
 }
 
 #buttons {
@@ -110,8 +164,8 @@ input {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 10px;
-    margin: 0 60px 0 60px;
+    /* padding: 10px; */
+    margin: 0 60px 0 100px;
 
     /* margin: 20px 20px 20px 0; */
 }
@@ -141,58 +195,4 @@ button:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* would like to add audio of lightsaber turning on when you click the above button */
-
-.data-container {
-    width: auto;
-    /* color: white; */
-    border: 5px solid #FFE81F;
-    /* margin: auto; */
-    /* padding: 10px;  */
-    margin: 20px 40px 0 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border-radius: 20px;
-} 
-
-/* .card::-webkit-scrollbar-track {
-    border-radius: 20px;
-  }  */
-
-.card {
-    display: flex;
-    border-radius: 15px;
-    width: 300px;
-    height: 100%;
-    overflow: hidden;
-    /* margin: 10px; */
-    /* padding: 10px; */
-    color: whitesmoke;
-    flex-wrap: wrap;
-    text-align: center;
-    font-size:24px;
-    font-family: 'Bruno Ace SC', cursive;
-} 
-
-.card-content {
-    overflow: hidden;
-    border: 3px solid red;
-    border-radius: 15px;
-    background: rgb(6, 6, 6);
-    opacity: 80%;
-    padding: 15px;
-    margin: .5rem;
-    display: flex;
-    flex-wrap: flex;
-    text-align: center;
-    overflow: auto;
-    height: 100%;
-    
-}
-
-.card:hover {
-    overflow:auto;
 }
