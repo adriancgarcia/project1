@@ -115,7 +115,7 @@ body {
 button {
     width: 100%;
     position: relative;
-    margin-top: 20px;
+    margin: 20px 0 40px 0;
     padding: 15px;
     font-size: 20px;
     font-family: 'Bruno Ace SC', cursive;
